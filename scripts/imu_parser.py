@@ -107,7 +107,7 @@ if __name__ == '__main__':
     imu_fusion_topic = rospy.get_param("~imu_fusion_sub_topic", "hedge_imu_fusion")
     imu_raw_topic = rospy.get_param("~imu_raw_sub_topic", "hedge_imu_raw")
     imu_pub_topic = rospy.get_param("~imu_pub_topic", "parsed_imu")
-    frame = rospy.get_param("~rame", "beacon_frame")
+    frame = rospy.get_param("~frame", "beacon_frame")
     imu_ang_vel_cov = rospy.get_param("~imu_angular_velocity_covariance_diagonal", [0.000001, 0.000001, 0.00001])
     imu_lin_acc_cov = rospy.get_param("~imu_linear_acceleration_covariance_diagonal", [0.001, 0.001, 0.001])
     
