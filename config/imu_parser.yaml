@@ -1,0 +1,6 @@
+imu_fusion_sub_topic: "hedge_imu_fusion"
+imu_raw_sub_topic: "hedge_imu_raw"
+imu_pub_topic: "parsed_imu"
+frame: "beacon_frame"
+imu_angular_velocity_covariance_diagonal: [0.000001, 0.000001, 0.00001]
+imu_linear_acceleration_covariance_diagonal: [0.001, 0.001, 0.001]

@@ -1,0 +1,23 @@
+<launch>
+  <node name="pose_parser" pkg="leo_marvelmind" type="pose_parser.py" output="screen">
+    <rosparam command="load" file="$(find leo_marvelmind)/config/pose_parser.yaml"/>
+  </node>
+
+  <node name="imu_parser" pkg="leo_marvelmind" type="imu_parser.py" output="screen">
+    <rosparam command="load" file="$(find leo_marvelmind)/config/imu_parser.yaml"/>
+  </node>
+
+  <node name="wheel_odom_parser" pkg="leo_marvelmind" type="wheel_odom_parser.py" output="screen">
+    <rosparam command="load" file="$(find leo_marvelmind)/config/wheel_odom_parser.yaml"/>
+  </node>
+
+  <node name="robot_loc_odom" pkg="robot_localization" clear_params="true" type="ukf_localization_node">
+    <rosparam command="load" file="$(find leo_marvelmind)/config/ukf_odom.yaml"/>
+  </node>
+
+  <node name="robot_loc_map" pkg="robot_localization" clear_params="true" type="ukf_localization_node">
+    <rosparam command="load" file="$(find leo_marvelmind)/config/ukf_map.yaml"/>
+  </node>
+  
+  <node name="hedge_rcv_bin" pkg="marvelmind_nav" type="hedge_rcv_bin"/>
+</launch>
