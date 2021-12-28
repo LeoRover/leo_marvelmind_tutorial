@@ -11,7 +11,7 @@ class MarvelmindImuParser():
     # Class for parsing messages from marvelmind imu topics  to rosmsg Imu
     
     MG_TO_MS2 = 9.80665 / 1000.0 
-    DPS_TO_RPS =  (math.pi / 180.0) * 0.0175
+    DPS_TO_RPS = (math.pi / 180.0) * 0.0175
 
     def __init__(self, fusion_topic_name, raw_topic_name, pub_topic_name, angular_cov, linear_cov, data_frame):
         # Diagonals of covariance matrices for angular velocity and linear acceleration

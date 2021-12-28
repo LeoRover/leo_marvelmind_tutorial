@@ -3,6 +3,6 @@ wheel_covariance_topic: "wheel_odom_with_covariance"
 pose_pub_topic: "parsed_pose"
 frame_id: "map"
 child_frame: "beacon_frame"
-pose_covariance_diagonal: [0.01, 0.01, 0, 0, 0, 0]
-min_linear_speed_covariance: 0.01
-max_linear_speed_covariance: 0.001
+pose_covariance_diagonal: [0.1, 0.1, 0, 0, 0, 0]
+min_linear_speed_covariance: 5.0
+max_linear_speed_covariance: 1.0

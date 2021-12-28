@@ -15,6 +15,7 @@
 
   <node name="robot_loc_odom" pkg="robot_localization" clear_params="true" type="ukf_localization_node">
     <rosparam command="load" file="$(find leo_marvelmind)/config/ukf_odom.yaml"/>
+    <remap from="/odometry/filtered" to="odometry/filtered_odom"/>
   </node>
 
   <node name="robot_loc_map" pkg="robot_localization" clear_params="true" type="ukf_localization_node">
